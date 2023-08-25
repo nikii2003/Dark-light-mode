@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Light-Mode</title>
+</head>
+<style>
+    .container{
+        height: 300px;
+        width: 300px;
+        background-color: aqua;
+        display: block;
+        margin: 10px auto;
+        margin-top: 20px;
+        border-radius: 20px;
+        border: 2px solid black;
+    }
+    .black-container{
+        height: 400px;
+        width: 500px;
+        display: block;
+        margin: 10px auto;
+        padding: 20px;
+        border-radius: 10px;
+        border: 3px solid aqua;
+    }
+    .bg-dark-container{
+        background-color: black;
+    }
+    .Dark-Light-Mode-btn{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+    .dark-light-btn{
+        color: aliceblue;
+        background-color: black;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .bg-light{
+     background-color: aliceblue;
+    }
+    .bg-dark{
+     background-color: black;   
+    }
+  .text1{
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+  }
+  .text2{
+    text-align: center;
+   color: aliceblue;
+   position: relative;
+    top: -30px;
+  }
+</style>
+<body>
+    <div class="black-container " id="inner">
+<div class="container" id="box">
+    <h1 class="text1" id="light"></h1>
+    <h1 class="text2" id="dark"></h1>
+   
+</div>
+<div class="Dark-Light-Mode-btn">
+<button class="dark-light-btn" onclick="changeclassName('bg-light')">Light Mode</button>
+<button class="dark-light-btn" onclick="changeclassName('bg-dark')">Dark Mode</button>
+
+</div>
+</div>
+<script>
+    function changeclassName(bgname ){
+        const disco=document.getElementById('box');
+        disco.className=(`container  ${bgname}`);
+        const lightwhite=document.getElementById('light');
+        lightwhite.innerText=`I'm Light Mode`;
+           
+    const lightdark=document.getElementById('dark');
+        lightdark.innerText=`I'm Dark Mode `;
+    }
+
+
+    
+</script>
+</body>
+</html>
